@@ -1,7 +1,12 @@
 pipeline {
     
     agent any   
-    environment {        
+    environment {
+        
+        
+        
+        
+        
       TOMCAT_DEV = "172.31.49.161"
       TOMCAT_USER = "ec2-user"
     }
