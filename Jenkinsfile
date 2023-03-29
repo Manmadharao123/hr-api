@@ -41,12 +41,7 @@ pipeline {
                 }
             }
             steps{
-              sshagent(['tocat-dev']) {
-                  
-                  
-                  
-                  
-                  
+              sshagent(['tocat-dev']) {                 
                   // copy war file onto tomcat sever
                   sh "scp -o StrictHostKeyChecking=no target/*.war $TOMCAT_USER@$TOMCAT_DEV:/opt/tomcat9/webapps/"
                   sh "ssh $TOMCAT_USER@$TOMCAT_DEV /opt/tomcat9/bin/shutdown.sh"
